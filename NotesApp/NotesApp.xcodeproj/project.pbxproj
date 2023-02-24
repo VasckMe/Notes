@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		18C89A5C29A522EB009DF305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A5B29A522EB009DF305 /* AppDelegate.swift */; };
 		18C89A5E29A522EB009DF305 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A5D29A522EB009DF305 /* SceneDelegate.swift */; };
-		18C89A6029A522EB009DF305 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A5F29A522EB009DF305 /* FolderViewController.swift */; };
 		18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A6429A522EB009DF305 /* NotesApp.xcdatamodeld */; };
 		18C89A6829A522EE009DF305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C89A6729A522EE009DF305 /* Assets.xcassets */; };
 		18C89A6B29A522EE009DF305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C89A6929A522EE009DF305 /* LaunchScreen.storyboard */; };
 		18E6423D29A8AA32006A9FA2 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E6423C29A8AA32006A9FA2 /* Folder.storyboard */; };
+		18E6424129A8C2B5006A9FA2 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18C89A5829A522EB009DF305 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C89A5B29A522EB009DF305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C89A5D29A522EB009DF305 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18C89A5F29A522EB009DF305 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 		18C89A6529A522EB009DF305 /* NotesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesApp.xcdatamodel; sourceTree = "<group>"; };
 		18C89A6729A522EE009DF305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C89A6A29A522EE009DF305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C89A6C29A522EE009DF305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E6423C29A8AA32006A9FA2 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
+		18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 		18C89A7329A523B0009DF305 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18C89A5F29A522EB009DF305 /* FolderViewController.swift */,
+				18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C89A6029A522EB009DF305 /* FolderViewController.swift in Sources */,
+				18E6424129A8C2B5006A9FA2 /* FolderViewController.swift in Sources */,
 				18C89A5C29A522EB009DF305 /* AppDelegate.swift in Sources */,
 				18C89A5E29A522EB009DF305 /* SceneDelegate.swift in Sources */,
 				18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */,
