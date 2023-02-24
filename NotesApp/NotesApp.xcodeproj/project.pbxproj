@@ -14,6 +14,7 @@
 		18C89A6B29A522EE009DF305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C89A6929A522EE009DF305 /* LaunchScreen.storyboard */; };
 		18E6423D29A8AA32006A9FA2 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E6423C29A8AA32006A9FA2 /* Folder.storyboard */; };
 		18E6424129A8C2B5006A9FA2 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */; };
+		18E6424429A8C792006A9FA2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424329A8C792006A9FA2 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		18C89A6C29A522EE009DF305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18E6423C29A8AA32006A9FA2 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
 		18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		18E6424329A8C792006A9FA2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		18C89A5A29A522EB009DF305 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				18E6424229A8C784006A9FA2 /* Manager */,
 				18C89A7229A523A8009DF305 /* Delegate */,
 				18C89A7529A524B8009DF305 /* Model */,
 				18C89A7429A523C7009DF305 /* View */,
@@ -100,6 +103,14 @@
 				18C89A6429A522EB009DF305 /* NotesApp.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		18E6424229A8C784006A9FA2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				18E6424329A8C792006A9FA2 /* CoreDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				18E6424129A8C2B5006A9FA2 /* FolderViewController.swift in Sources */,
 				18C89A5C29A522EB009DF305 /* AppDelegate.swift in Sources */,
 				18C89A5E29A522EB009DF305 /* SceneDelegate.swift in Sources */,
+				18E6424429A8C792006A9FA2 /* CoreDataManager.swift in Sources */,
 				18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
