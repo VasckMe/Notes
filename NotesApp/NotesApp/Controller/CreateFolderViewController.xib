@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateFolderViewController" customModule="NotesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButtonOutlet" destination="Neh-g5-ETP" id="0dZ-IE-PAP"/>
+                <outlet property="contentView" destination="81T-q9-2OL" id="qqb-PX-CDR"/>
+                <outlet property="doneButtonOutlet" destination="e5E-Ce-20b" id="kiI-21-eY8"/>
+                <outlet property="folderTitleLabel" destination="qqr-4C-2Kl" id="WsH-5T-QRR"/>
+                <outlet property="titleLabel" destination="gu2-Dz-Oow" id="u0x-xv-fT2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81T-q9-2OL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5E-Ce-20b">
+                            <rect key="frame" x="335" y="10" width="69" height="35.666666666666664"/>
+                            <color key="tintColor" systemColor="systemYellowColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Done">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="wto-j1-dl7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Neh-g5-ETP">
+                            <rect key="frame" x="10" y="10" width="83.666666666666671" height="35.666666666666664"/>
+                            <color key="tintColor" systemColor="systemYellowColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="Voc-7s-9Bo"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter folder title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qqr-4C-2Kl">
+                            <rect key="frame" x="10" y="58.666666666666657" width="394" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Folder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu2-Dz-Oow">
+                            <rect key="frame" x="160" y="16.666666666666668" width="94" height="22.000000000000004"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qqr-4C-2Kl" firstAttribute="top" secondItem="gu2-Dz-Oow" secondAttribute="bottom" constant="20" id="01Q-3R-Cq4"/>
+                        <constraint firstItem="Neh-g5-ETP" firstAttribute="top" secondItem="81T-q9-2OL" secondAttribute="top" constant="10" id="Ltq-c7-EOD"/>
+                        <constraint firstItem="gu2-Dz-Oow" firstAttribute="centerX" secondItem="81T-q9-2OL" secondAttribute="centerX" id="M0a-CR-Qlc"/>
+                        <constraint firstItem="e5E-Ce-20b" firstAttribute="top" secondItem="81T-q9-2OL" secondAttribute="top" constant="10" id="OIL-2K-pPh"/>
+                        <constraint firstAttribute="trailing" secondItem="e5E-Ce-20b" secondAttribute="trailing" constant="10" id="TqB-qZ-941"/>
+                        <constraint firstItem="qqr-4C-2Kl" firstAttribute="leading" secondItem="81T-q9-2OL" secondAttribute="leading" constant="10" id="Vmm-Jc-SDT"/>
+                        <constraint firstAttribute="trailing" secondItem="qqr-4C-2Kl" secondAttribute="trailing" constant="10" id="gAi-Id-e59"/>
+                        <constraint firstItem="gu2-Dz-Oow" firstAttribute="centerY" secondItem="Neh-g5-ETP" secondAttribute="centerY" id="gFV-dP-8k4"/>
+                        <constraint firstItem="Neh-g5-ETP" firstAttribute="leading" secondItem="81T-q9-2OL" secondAttribute="leading" constant="10" id="jyh-a4-PJE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="81T-q9-2OL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1Gn-dp-3gS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="81T-q9-2OL" secondAttribute="trailing" id="Be0-b2-ajl"/>
+                <constraint firstItem="81T-q9-2OL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J2s-sT-8jp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="81T-q9-2OL" secondAttribute="bottom" id="Q6m-4o-1oV"/>
+            </constraints>
+            <point key="canvasLocation" x="-28" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

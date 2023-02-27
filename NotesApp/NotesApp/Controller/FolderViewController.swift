@@ -12,6 +12,8 @@ final class FolderViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     
     @IBAction private func createFolderAction(_ sender: UIBarButtonItem) {
+        let control = CreateFolderViewController(nibName: "CreateFolderViewController", bundle: nil)
+        navigationController?.present(control, animated: true)
     }
     
     @IBAction private func createNoteAciton(_ sender: UIBarButtonItem) {
