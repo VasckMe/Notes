@@ -11,7 +11,7 @@ final class CoreDataManager {
     
     static let shared = CoreDataManager()
     
-    private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private init() {}
 }

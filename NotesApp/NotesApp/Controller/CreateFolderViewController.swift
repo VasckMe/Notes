@@ -34,7 +34,8 @@ final class CreateFolderViewController: UIViewController {
     }
     
     @IBAction private func doneAction(_ sender: UIButton) {
-        #warning("TODO")
+        createFolder()
+        self.dismiss(animated: true)
     }
     
     @IBAction private func cancelAction(_ sender: UIButton) {
@@ -43,5 +44,22 @@ final class CreateFolderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+// MARK: - Private API
+
+private extension CreateFolderViewController {
+    func createFolder() {
+        guard
+            let folderTitle = folderTitleLabel.text,
+            !folderTitle.isEmpty
+        else {
+            return
+        }
+        
+        let folder = Folder(context: CoreDataManager.shared.context)
+        folder.name = folderTitle
+        CoreDataManager.shared.saveContext()
     }
 }
