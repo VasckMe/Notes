@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FolderViewControllerDelegate {
+    func addFolder(folder: Folder)
+}
+
 final class FolderViewController: UIViewController {
     
     var folders = [Folder]()
@@ -21,6 +25,7 @@ final class FolderViewController: UIViewController {
     
     @IBAction private func createFolderAction(_ sender: UIBarButtonItem) {
         let control = CreateFolderViewController(nibName: "CreateFolderViewController", bundle: nil)
+        control.delegate = self
         navigationController?.present(control, animated: true)
     }
     
@@ -53,6 +58,14 @@ extension FolderViewController: UITableViewDataSource {
 
 extension FolderViewController: UITableViewDelegate {
     
+}
+
+extension FolderViewController: FolderViewControllerDelegate {
+    func addFolder(folder: Folder) {
+        folders.append(folder)
+        CoreDataManager.shared.saveContext()
+        tableView.insertRows(at: [IndexPath(row: folders.count - 1, section: 0)], with: .automatic)
+    }
 }
 
 // MARK: - Private API

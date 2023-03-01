@@ -9,6 +9,8 @@ import UIKit
 
 final class CreateFolderViewController: UIViewController {
 
+    var delegate: FolderViewControllerDelegate?
+    
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var titleLabel: UILabel! {
         didSet {
@@ -30,6 +32,7 @@ final class CreateFolderViewController: UIViewController {
     @IBOutlet private weak var folderTitleLabel: UITextField! {
         didSet {
             folderTitleLabel.text = "New Folder"
+            folderTitleLabel.becomeFirstResponder()
         }
     }
     
@@ -42,8 +45,15 @@ final class CreateFolderViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        folderTitleLabel.selectAll(folderTitleLabel.text)
     }
 }
 
@@ -60,6 +70,11 @@ private extension CreateFolderViewController {
         
         let folder = Folder(context: CoreDataManager.shared.context)
         folder.name = folderTitle
-        CoreDataManager.shared.saveContext()
+        
+        guard let delegate = delegate else {
+            return
+        }
+        
+        delegate.addFolder(folder: folder)
     }
 }
