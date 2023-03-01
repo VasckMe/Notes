@@ -12,7 +12,7 @@
 		18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A6429A522EB009DF305 /* NotesApp.xcdatamodeld */; };
 		18C89A6829A522EE009DF305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C89A6729A522EE009DF305 /* Assets.xcassets */; };
 		18C89A6B29A522EE009DF305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C89A6929A522EE009DF305 /* LaunchScreen.storyboard */; };
-		18E6423D29A8AA32006A9FA2 /* Folder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E6423C29A8AA32006A9FA2 /* Folder.storyboard */; };
+		18E6423D29A8AA32006A9FA2 /* FolderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E6423C29A8AA32006A9FA2 /* FolderViewController.storyboard */; };
 		18E6424129A8C2B5006A9FA2 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */; };
 		18E6424429A8C792006A9FA2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424329A8C792006A9FA2 /* CoreDataManager.swift */; };
 		18E6424D29A8D16C006A9FA2 /* CreateFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6424B29A8D16B006A9FA2 /* CreateFolderViewController.swift */; };
@@ -27,7 +27,7 @@
 		18C89A6729A522EE009DF305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C89A6A29A522EE009DF305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18C89A6C29A522EE009DF305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18E6423C29A8AA32006A9FA2 /* Folder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Folder.storyboard; sourceTree = "<group>"; };
+		18E6423C29A8AA32006A9FA2 /* FolderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FolderViewController.storyboard; sourceTree = "<group>"; };
 		18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 		18E6424329A8C792006A9FA2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18E6424B29A8D16B006A9FA2 /* CreateFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 		18C89A7429A523C7009DF305 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18E6423C29A8AA32006A9FA2 /* FolderViewController.storyboard */,
 				18C89A6929A522EE009DF305 /* LaunchScreen.storyboard */,
-				18E6423C29A8AA32006A9FA2 /* Folder.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E6423D29A8AA32006A9FA2 /* Folder.storyboard in Resources */,
+				18E6423D29A8AA32006A9FA2 /* FolderViewController.storyboard in Resources */,
 				18C89A6B29A522EE009DF305 /* LaunchScreen.storyboard in Resources */,
 				18E6424E29A8D16C006A9FA2 /* CreateFolderViewController.xib in Resources */,
 				18C89A6829A522EE009DF305 /* Assets.xcassets in Resources */,
@@ -340,7 +340,7 @@
 				INFOPLIST_FILE = NotesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Folder;
+				INFOPLIST_KEY_UIMainStoryboardFile = FolderViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -369,7 +369,7 @@
 				INFOPLIST_FILE = NotesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Folder;
+				INFOPLIST_KEY_UIMainStoryboardFile = FolderViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

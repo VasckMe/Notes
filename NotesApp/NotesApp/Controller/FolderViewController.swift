@@ -30,6 +30,13 @@ final class FolderViewController: UIViewController {
     }
     
     @IBAction private func createNoteAciton(_ sender: UIBarButtonItem) {
+        for folder in folders {
+            CoreDataManager.shared.context.delete(folder)
+        }
+        
+        folders.removeAll()
+        CoreDataManager.shared.saveContext()
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -38,6 +45,8 @@ final class FolderViewController: UIViewController {
         loadFolders()
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension FolderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,15 +65,19 @@ extension FolderViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension FolderViewController: UITableViewDelegate {
     
 }
+
+// MARK: - FolderViewControllerDelegate
 
 extension FolderViewController: FolderViewControllerDelegate {
     func addFolder(folder: Folder) {
         folders.append(folder)
         CoreDataManager.shared.saveContext()
-        tableView.insertRows(at: [IndexPath(row: folders.count - 1, section: 0)], with: .automatic)
+        tableView.insertRows(at: [IndexPath(row: folders.count - 1, section: 0)], with: .fade)
     }
 }
 
