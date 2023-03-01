@@ -54,21 +54,44 @@ extension FolderViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = folders[indexPath.row].name
-        cell.detailTextLabel?.text = "number"
+        let folder = folders[indexPath.row]
+        
+        cell.textLabel?.text = folder.name
+        cell.detailTextLabel?.text = "\(folder.notes?.count ?? 0)"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return folders.count
+        folders.count
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: nil) { _, _, _ in
+            let folder = self.folders[indexPath.row]
+            
+            CoreDataManager.shared.context.delete(folder)
+            self.folders.remove(at: indexPath.row)
+            CoreDataManager.shared.saveContext()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        delete.image = UIImage(systemName: "bin.xmark.fill")
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [delete])
+        
+        return swipeActions
     }
 }
 
 // MARK: - UITableViewDelegate
 
 extension FolderViewController: UITableViewDelegate {
-    
+
 }
 
 // MARK: - FolderViewControllerDelegate
