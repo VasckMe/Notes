@@ -33,6 +33,11 @@ extension CoreDataManager {
         }
     }
     
+    // Deleting
+    func deleteFromContext(object: NSManagedObject) {
+        CoreDataManager.shared.context.delete(object)
+    }
+    
     // Saving
     func saveContext() {
         do {

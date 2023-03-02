@@ -74,7 +74,7 @@ extension FolderViewController: UITableViewDataSource {
         let delete = UIContextualAction(style: .destructive, title: nil) { _, _, _ in
             let folder = self.folders[indexPath.row]
             
-            CoreDataManager.shared.context.delete(folder)
+            CoreDataManager.shared.deleteFromContext(object: folder)
             self.folders.remove(at: indexPath.row)
             CoreDataManager.shared.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -91,7 +91,7 @@ extension FolderViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension FolderViewController: UITableViewDelegate {
-
+    // tap
 }
 
 // MARK: - FolderViewControllerDelegate
