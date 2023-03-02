@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1819EF5529B0CB6800EF4FE2 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 1819EF5429B0CB6800EF4FE2 /* File */; };
+		1862005529AF9DFB00FDDE87 /* DetailNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1862005329AF9DFB00FDDE87 /* DetailNoteViewController.swift */; };
+		1862005629AF9DFB00FDDE87 /* DetailNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862005429AF9DFB00FDDE87 /* DetailNoteViewController.xib */; };
 		18C89A5C29A522EB009DF305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A5B29A522EB009DF305 /* AppDelegate.swift */; };
 		18C89A5E29A522EB009DF305 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A5D29A522EB009DF305 /* SceneDelegate.swift */; };
 		18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18C89A6429A522EB009DF305 /* NotesApp.xcdatamodeld */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1819EF5429B0CB6800EF4FE2 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		1862005329AF9DFB00FDDE87 /* DetailNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoteViewController.swift; sourceTree = "<group>"; };
+		1862005429AF9DFB00FDDE87 /* DetailNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailNoteViewController.xib; sourceTree = "<group>"; };
 		18C89A5829A522EB009DF305 /* NotesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C89A5B29A522EB009DF305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C89A5D29A522EB009DF305 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,7 @@
 		18C89A4F29A522EB009DF305 = {
 			isa = PBXGroup;
 			children = (
+				1819EF5429B0CB6800EF4FE2 /* File */,
 				18C89A5A29A522EB009DF305 /* NotesApp */,
 				18C89A5929A522EB009DF305 /* Products */,
 			);
@@ -89,6 +96,7 @@
 			children = (
 				18E6424029A8C2B5006A9FA2 /* FolderViewController.swift */,
 				18E6424B29A8D16B006A9FA2 /* CreateFolderViewController.swift */,
+				1862005329AF9DFB00FDDE87 /* DetailNoteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				18E6423C29A8AA32006A9FA2 /* FolderViewController.storyboard */,
 				18E6424C29A8D16B006A9FA2 /* CreateFolderViewController.xib */,
+				1862005429AF9DFB00FDDE87 /* DetailNoteViewController.xib */,
 				18C89A6929A522EE009DF305 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -179,6 +188,8 @@
 			files = (
 				18E6423D29A8AA32006A9FA2 /* FolderViewController.storyboard in Resources */,
 				18C89A6B29A522EE009DF305 /* LaunchScreen.storyboard in Resources */,
+				1819EF5529B0CB6800EF4FE2 /* File in Resources */,
+				1862005629AF9DFB00FDDE87 /* DetailNoteViewController.xib in Resources */,
 				18E6424E29A8D16C006A9FA2 /* CreateFolderViewController.xib in Resources */,
 				18C89A6829A522EE009DF305 /* Assets.xcassets in Resources */,
 			);
@@ -196,6 +207,7 @@
 				18C89A5E29A522EB009DF305 /* SceneDelegate.swift in Sources */,
 				18E6424429A8C792006A9FA2 /* CoreDataManager.swift in Sources */,
 				18E6424D29A8D16C006A9FA2 /* CreateFolderViewController.swift in Sources */,
+				1862005529AF9DFB00FDDE87 /* DetailNoteViewController.swift in Sources */,
 				18C89A6629A522EB009DF305 /* NotesApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

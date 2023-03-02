@@ -90,7 +90,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Folders" id="K0M-MB-JGO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="rEN-cG-tQD" id="g7l-xm-6PM"/>
                         <outlet property="tableView" destination="ytj-RP-qcn" id="YMl-pN-j1B"/>
@@ -105,7 +104,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="EH5-do-G4r" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="O6M-NW-Al3">
                         <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>

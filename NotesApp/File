@@ -1,0 +1,13 @@
+
+Для кнопок
+        let one = UIBarButtonItem(title: "ONE", style: .done, target: nil, action: nil)
+        let two = UIBarButtonItem(title: "TWO", style: .plain, target: nil, action: #selector(test))
+        setToolbarItems([one, two], animated: true)
+
+Для заголовка
+    @objc func test() {
+        let comp = noteTextView.text.components(separatedBy: CharacterSet.newlines)
+//        noteTextView.text.contain
+        noteTextView.set
+        print(comp)
+    }

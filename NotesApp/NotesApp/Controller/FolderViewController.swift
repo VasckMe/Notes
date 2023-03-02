@@ -30,13 +30,8 @@ final class FolderViewController: UIViewController {
     }
     
     @IBAction private func createNoteAciton(_ sender: UIBarButtonItem) {
-        for folder in folders {
-            CoreDataManager.shared.context.delete(folder)
-        }
-        
-        folders.removeAll()
-        CoreDataManager.shared.saveContext()
-        tableView.reloadData()
+        let controller = DetailNoteViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     override func viewDidLoad() {
