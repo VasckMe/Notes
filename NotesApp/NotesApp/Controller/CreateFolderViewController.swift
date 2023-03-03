@@ -61,6 +61,10 @@ final class CreateFolderViewController: UIViewController {
 
 private extension CreateFolderViewController {
     func createFolder() {
+        guard let delegate = delegate else {
+            return
+        }
+        
         guard
             let folderTitle = folderTitleLabel.text,
             !folderTitle.isEmpty
@@ -71,9 +75,12 @@ private extension CreateFolderViewController {
         let folder = Folder(context: CoreDataManager.shared.context)
         folder.name = folderTitle
         
-        guard let delegate = delegate else {
+        
+        guard let folders = CoreDataManager.shared.loadFolders() else {
             return
         }
+        
+        folder.id = Int16(folders.count)
         
         delegate.addFolder(folder: folder)
     }

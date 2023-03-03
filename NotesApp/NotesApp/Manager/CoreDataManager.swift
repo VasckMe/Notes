@@ -13,7 +13,9 @@ final class CoreDataManager {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    private init() {}
+    private init() {
+        createDefaultFolder()
+    }
 }
 
 extension CoreDataManager {
@@ -22,8 +24,11 @@ extension CoreDataManager {
         with request: NSFetchRequest<Folder> = Folder.fetchRequest(),
         predicate: String? = nil
     ) -> [Folder]? {
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
+        
         if let predicate = predicate {
-            request.predicate = NSPredicate(format: "name CONTAINS", predicate)
+            request.predicate = NSPredicate(format: "name CONTAINS %@", predicate)
         }
         do {
             return try context.fetch(request)
@@ -44,6 +49,19 @@ extension CoreDataManager {
             try context.save()
         } catch {
             print("Error while saving context: \(error)")
+        }
+    }
+}
+
+private extension CoreDataManager {
+    func createDefaultFolder() {
+        if let folders = loadFolders(predicate: "All Notes"),
+           folders.count == 0 {
+            let allNotes = Folder(context: context)
+            allNotes.name = "All Notes"
+            allNotes.id = 0
+            saveContext()
+            
         }
     }
 }
